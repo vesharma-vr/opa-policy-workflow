@@ -1,0 +1,10 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Generated policies (output of workflow.py / demo.py)
+policies/
+
+# macOS
+.DS_Store
