@@ -1,6 +1,6 @@
 # OPA Policy Generation Workflow (AWS Bedrock)
 
-A Python workflow that uses **AWS Bedrock + Claude Sonnet 5** to generate
+A Python workflow that uses **AWS Bedrock + Sonnet 5** to generate
 **Open Policy Agent (OPA) policies in Rego** from natural-language requirements.
 
 It demonstrates the prompt-engineering techniques from our chat thread:
@@ -32,7 +32,7 @@ It demonstrates the prompt-engineering techniques from our chat thread:
                           ▼
               ┌────────────────────────┐
               │   bedrock_client.py    │   boto3 converse() call
-              │   BedrockClient       │   model: claude-sonnet-5 
+              │   BedrockClient       │   model: Sonnet 5        
               └────────────────────────┘
                           │
                           ▼
@@ -72,7 +72,7 @@ It demonstrates the prompt-engineering techniques from our chat thread:
 ### 1. AWS credentials
 
 You need an AWS account with access to **Amazon Bedrock** and permission to
-invoke Claude Sonnet 5 (`us.anthropic.claude-sonnet-5`).
+invoke Sonnet 5 (`us.anthropic.claude-sonnet-5`).
 
 ```bash
 # Option A: env vars
@@ -248,4 +248,4 @@ And `result.validation_status == ValidationStatus.VALID`.
   examples (e.g. CI/CD pipelines, Kafka ACLs) will improve output quality
   in those areas.
 - Token cost per generation: ~1,500 input tokens (system + few-shot), ~1,000
-  output tokens. Check current Bedrock pricing for Claude Sonnet 5.
+  output tokens. Check current Bedrock pricing for Sonnet 5.

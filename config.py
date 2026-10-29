@@ -15,14 +15,14 @@ class BedrockConfig:
 
     region_name: str = "us-east-1"
 
-    # Claude Sonnet 5 via the US cross-region inference profile. Our org's SCP
+    # Sonnet 5 via the US cross-region inference profile. Our org's SCP
     # blocks global.* profiles and newer models (Sonnet 5.5, Opus 4.8+), so
     # check access before swapping. Allowed alternatives:
     # "us.anthropic.claude-sonnet-4-6" or, for cost-sensitive workloads,
     # "us.anthropic.claude-haiku-4-5-20251001-v1:0".
     model_id: str = "us.anthropic.claude-sonnet-5"
 
-    # No temperature / top_p: Claude Sonnet 5 rejects sampling parameters.
+    # No temperature / top_p: Sonnet 5 rejects sampling parameters.
     max_tokens: int = 4096
 
     # AWS credentials are pulled from the standard chain:
